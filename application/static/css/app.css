@@ -1,0 +1,13 @@
+body{
+    background-color:darkgreen;
+}
+h1{
+    color:black;
+}
+
+tr:hover{
+ color:blue;
+}
+.jumbotron{
+  color:brown;
+}
