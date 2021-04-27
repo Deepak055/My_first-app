@@ -29,7 +29,7 @@
         {% for emp in Employee %}
         <tr>
             <td>{{emp.E_id}}</a></td>
-            <td><a href="{% url 'Employee_detail' pk=employee.pk %}">{{emp.E_name|upper}}</a></td>
+            <td><a href="{% url 'Employee_detail' pk=emp.pk %}">{{emp.E_name|upper}}</a></td>
             <td>{{emp.E_sal}}</td>
             <td>{{emp.E_sal_date}}</td>
         </tr>

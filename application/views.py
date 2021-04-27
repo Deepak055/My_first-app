@@ -4,14 +4,14 @@ from django.utils import timezone
 # Create your views here.
 def index(request):
     Employees = Employee.objects.all()
-    return render(request,'application\index.html',{'Employee':Employees})
+    return render(request,'application/index.html',{'Employee':Employees})
 
 
 def base(request):
     
-    return render(request,'application\home.html')
+    return render(request,'application/home.html')
 
 def Employee_detail(request, pk):
-    employee= get_object_or_404(Employee, pk)
-    return render(request, 'application\Employee_detail.html',{'employee':employee})
+    employee= get_object_or_404(Employee, pk=pk)
+    return render(request, 'application/Employee_detail.html',{'employee':employee})
 
