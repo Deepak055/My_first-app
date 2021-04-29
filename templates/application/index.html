@@ -19,24 +19,29 @@
        <div class="container">    
            <div class="jumbotron"> 
     <h1>Employee Details</h1><hr>
+    {% block body %}
+    
     <table class="table table-dark table-hover"><thead>
         <th>E_name</th>
         <th>E_no</th>
         <th>E_sal</th>
         <th>E_sal_date</th>
-        </thead>
-        {% block body %}
+        </thead>{% endblock %}
+       
         {% for emp in Employee %}
+        <a  href="{% url 'Employee_edit' pk=emp.pk %}">
+            {% include 'application\icon\pencil-fill.svg'  %}
+          </a>
         <tr>
             <td>{{emp.E_id}}</a></td>
             <td><a href="{% url 'Employee_detail' pk=emp.pk %}">{{emp.E_name|upper}}</a></td>
             <td>{{emp.E_sal}}</td>
             <td>{{emp.E_sal_date}}</td>
         </tr>
-        {% endfor %}
+       {% endfor %}
         
     </table></center></div></div></body>
     
-        {% endblock %}
+      
     
     </html>

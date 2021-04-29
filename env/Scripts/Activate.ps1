@@ -4,7 +4,7 @@ function global:deactivate ([switch]$NonDestructive) {
         copy-item function:_OLD_VIRTUAL_PROMPT function:prompt
         remove-item function:_OLD_VIRTUAL_PROMPT
     }
-
+python manage.pu
     if (Test-Path env:_OLD_VIRTUAL_PYTHONHOME) {
         copy-item env:_OLD_VIRTUAL_PYTHONHOME env:PYTHONHOME
         remove-item env:_OLD_VIRTUAL_PYTHONHOME

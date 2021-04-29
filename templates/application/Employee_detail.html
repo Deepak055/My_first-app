@@ -1,0 +1,14 @@
+{% extends 'application/home.html' %}
+
+{% block body %}
+{% if emp.E_sal_date %}
+<aside class="actions">
+    
+<a class="btn btn-default" href="{% url 'Employee_edit' pk=emp.pk %}">
+    {% include '/icons/pencil-fill.svg' %}
+</a>
+{% endif %}
+</aside>
+{{ emp.E_sal_date }}
+
+{% endblock %}
